@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "LocalVectorDB",
+    "slug": "localvectordb",
+    "scheme": "localvectordb",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.localvectordb.app",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.localvectordb.app"
+    },
+    "plugins": [
+      "expo-asset",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "15.1",
+            "useFrameworks": "static"
+          },
+          "android": {
+            "minSdkVersion": 24,
+            "kotlinVersion": "2.0.21",
+            "ndkVersion": "27.1.12297006",
+            "newArchEnabled": true
+          }
+        }
+      ],
+      "expo-dev-client"
+    ],
+    "extra": {
+      "sync": {
+        "enableNativeObjectBox": false,
+        "enableNativeOnnx": true,
+        "objectBoxDataUrl": "https://example.com/objectbox/data.mdb",
+        "objectBoxDataSha256": "REPLACE_WITH_OBJECTBOX_DATA_SHA256",
+        "objectBoxLockUrl": "https://example.com/objectbox/lock.mdb",
+        "objectBoxLockSha256": "REPLACE_WITH_OBJECTBOX_LOCK_SHA256",
+        "objectBoxIndexUrl": "https://example.com/objectbox/objectbox-index.json",
+        "objectBoxIndexSha256": "REPLACE_WITH_OBJECTBOX_INDEX_SHA256",
+        "modelUrl": "https://example.com/model.onnx",
+        "modelSha256": "REPLACE_WITH_MODEL_SHA256",
+        "modelVocabUrl": "https://example.com/vocab.txt",
+        "modelVocabSha256": "REPLACE_WITH_MODEL_VOCAB_SHA256"
+      },      "eas": {
+        "projectId": "4a06d954-1277-4504-9a30-34e9a442f5a7"
+      }
+    }
+  }
+}
