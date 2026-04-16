@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { checkLocalAssetsExist, syncCoreAssets } from '../services/syncService';
 import { LOCAL_PATHS } from '../config/paths';
+import { fetchNetworkStatus } from '../services/networkService';
 
 export const useAppStore = create((set) => ({
   isReady: false,
@@ -8,6 +9,7 @@ export const useAppStore = create((set) => ({
   isSyncing: false,
   syncStatus: 'Waiting to sync',
   syncProgress: 0,
+  isOfflineMode: false,
   error: null,
   assetPaths: {
     objectBoxDir: LOCAL_PATHS.objectBoxDir,
@@ -19,8 +21,31 @@ export const useAppStore = create((set) => ({
   },  results: [],
 
   setResults: (results) => set({ results }),
+  checkConnectivity: async () => {
+    try {
+      const status = await fetchNetworkStatus();
+      set({
+        isOfflineMode: !status.online,
+      });
+    } catch (_error) {
+      set({
+        isOfflineMode: true,
+      });
+    }
+  },
 
   hydrateFromDisk: async () => {
+    try {
+      const status = await fetchNetworkStatus();
+      set({
+        isOfflineMode: !status.online,
+      });
+    } catch (_error) {
+      set({
+        isOfflineMode: true,
+      });
+    }
+
     const exists = await checkLocalAssetsExist();
 
     set({

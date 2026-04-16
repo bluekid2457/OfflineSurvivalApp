@@ -6,6 +6,7 @@ export function SyncScreen() {
   const isSyncing = useAppStore((state) => state.isSyncing);
   const syncProgress = useAppStore((state) => state.syncProgress);
   const syncStatus = useAppStore((state) => state.syncStatus);
+  const isOfflineMode = useAppStore((state) => state.isOfflineMode);
   const error = useAppStore((state) => state.error);
   const runInitialSync = useAppStore((state) => state.runInitialSync);
 
@@ -19,10 +20,11 @@ export function SyncScreen() {
       </View>
 
       <Text style={styles.status}>{syncStatus}</Text>
+      {isOfflineMode ? <Text style={styles.offlineHint}>You are offline. Connect to internet to sync assets.</Text> : null}
 
       {error ? <Text style={styles.error}>{error}</Text> : null}
 
-      <Pressable style={[styles.button, isSyncing && styles.buttonDisabled]} onPress={runInitialSync} disabled={isSyncing}>
+      <Pressable style={[styles.button, (isSyncing || isOfflineMode) && styles.buttonDisabled]} onPress={runInitialSync} disabled={isSyncing || isOfflineMode}>
         <Text style={styles.buttonText}>{isSyncing ? 'Syncing...' : 'Download & Prepare Offline Assets'}</Text>
       </Pressable>
     </View>
@@ -64,6 +66,10 @@ const styles = StyleSheet.create({
   error: {
     color: '#fda4af',
     marginBottom: 18,
+  },
+  offlineHint: {
+    color: '#fbbf24',
+    marginBottom: 10,
   },
   button: {
     borderRadius: 14,
