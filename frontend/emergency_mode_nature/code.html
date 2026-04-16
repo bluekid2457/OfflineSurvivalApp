@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#2f4e33",
+                    "on-background": "#1c1c15",
+                    "on-tertiary-fixed": "#0c1d2b",
+                    "on-tertiary-fixed-variant": "#394858",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#544527",
+                    "on-surface": "#1c1c15",
+                    "tertiary-fixed-dim": "#b8c8db",
+                    "on-primary-fixed": "#03210b",
+                    "surface-container-highest": "#e5e2d8",
+                    "primary-fixed": "#c8ecc8",
+                    "secondary-fixed": "#f7dfb7",
+                    "on-tertiary-container": "#a3b4c6",
+                    "on-secondary-fixed": "#251a02",
+                    "surface-container-low": "#f7f4e8",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#98ba99",
+                    "primary-fixed-dim": "#adcfad",
+                    "on-secondary-container": "#726040",
+                    "tertiary-container": "#364656",
+                    "on-surface-variant": "#424841",
+                    "secondary-container": "#f4ddb4",
+                    "primary-container": "#2d4b31",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#c2c8bf",
+                    "secondary": "#6d5c3c",
+                    "surface-tint": "#47664a",
+                    "background": "#fdf9ee",
+                    "primary": "#17341c",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#f1eee3",
+                    "inverse-primary": "#adcfad",
+                    "surface-bright": "#fdf9ee",
+                    "inverse-on-surface": "#f4f1e6",
+                    "outline": "#737971",
+                    "surface-dim": "#dddacf",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e5e2d8",
+                    "tertiary": "#20303f",
+                    "surface-container-high": "#ebe8dd",
+                    "tertiary-fixed": "#d3e4f8",
+                    "surface": "#fdf9ee",
+                    "inverse-surface": "#313129",
+                    "secondary-fixed-dim": "#dac49d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Work Sans"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.02;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body min-h-screen">
+<div class="grain-overlay"></div>
+<!-- Navigation Suppressed for Emergency Mode -->
+<!-- TopAppBar (Emergency Variant) -->
+<header class="fixed top-0 w-full z-50 bg-[#fdf9ee]/85 dark:bg-[#1c1c15]/85 backdrop-blur-xl shadow-[0_32px_32px_0_rgba(28,28,21,0.06)] flex justify-between items-center px-6 h-16 w-full">
+<button class="text-on-background active:scale-95 duration-200">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="font-headline tracking-[0.1em] uppercase text-sm font-bold text-primary">EMERGENCY PROTOCOL</div>
+<button class="text-on-background active:scale-95 duration-200">
+<span class="material-symbols-outlined">flashlight_on</span>
+</button>
+</header>
+<main class="pt-24 pb-12 px-6 max-w-lg mx-auto space-y-8">
+<!-- Technical Telemetry / Compass Header -->
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-4">
+<div class="space-y-1">
+<p class="font-label text-[10px] uppercase tracking-widest text-outline">Coordinates</p>
+<p class="font-headline text-lg font-bold">45.52306° N, 122.67648° W</p>
+<p class="font-label text-[10px] uppercase tracking-widest text-outline">Altitude: 1,244 FT • Accuracy: 3M</p>
+</div>
+<div class="text-right">
+<p class="font-label text-[10px] uppercase tracking-widest text-outline">Signal</p>
+<div class="flex gap-0.5 justify-end mb-1">
+<div class="w-1 h-3 bg-primary rounded-full"></div>
+<div class="w-1 h-3 bg-primary rounded-full"></div>
+<div class="w-1 h-3 bg-outline-variant rounded-full"></div>
+<div class="w-1 h-3 bg-outline-variant rounded-full"></div>
+</div>
+<p class="font-label text-[10px] font-bold text-error">OFFLINE</p>
+</div>
+</div>
+<!-- SOS Pulse Action -->
+<section class="flex flex-col items-center justify-center py-8">
+<div class="relative">
+<!-- Visual Pulse Rings -->
+<div class="absolute inset-0 bg-error/10 rounded-full scale-150 blur-xl"></div>
+<div class="absolute inset-0 bg-error/5 rounded-full scale-[2] blur-2xl"></div>
+<button class="relative w-48 h-48 rounded-full bg-gradient-to-br from-error to-[#93000a] text-on-error shadow-2xl flex flex-col items-center justify-center transition-transform active:scale-90 duration-200 group">
+<span class="material-symbols-outlined text-6xl mb-2" style="font-variation-settings: 'FILL' 1;">emergency</span>
+<span class="font-headline text-3xl font-extrabold tracking-tighter">S.O.S</span>
+<span class="font-label text-[10px] uppercase tracking-widest mt-2 font-medium opacity-80">Hold to Signal</span>
+</button>
+</div>
+<p class="mt-8 text-center font-body text-sm text-on-surface-variant max-w-[240px]">
+                Initiates satellite beacon transmission and broadcasts last known position to base camp.
+            </p>
+</section>
+<!-- Critical Treatment Bento Grid -->
+<section class="space-y-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2 h-2 bg-error rounded-full"></span>
+<h2 class="font-headline text-xs font-bold uppercase tracking-[0.15em] text-on-surface">Critical Treatments</h2>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Snake Bite Card -->
+<div class="col-span-1 bg-surface-container-low p-5 rounded-xl border border-outline-variant/10 flex flex-col justify-between aspect-square group active:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">dangerous</span>
+<div>
+<h3 class="font-headline font-bold text-primary text-lg">Snake Bite</h3>
+<p class="text-[11px] font-body text-on-surface-variant leading-tight mt-1">Immobilize limb, keep below heart level.</p>
+</div>
+</div>
+<!-- Severe Bleeding Card -->
+<div class="col-span-1 bg-surface-container-low p-5 rounded-xl border border-outline-variant/10 flex flex-col justify-between aspect-square group active:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-error text-3xl" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+<div>
+<h3 class="font-headline font-bold text-primary text-lg leading-tight">Severe Bleeding</h3>
+<p class="text-[11px] font-body text-on-surface-variant leading-tight mt-1">Apply direct pressure. Prepare tourniquet.</p>
+</div>
+</div>
+<!-- Shock / Heat Card -->
+<div class="col-span-2 bg-surface-container p-5 rounded-xl border border-outline-variant/10 flex items-center gap-4 active:bg-surface-container-highest transition-colors">
+<div class="w-16 h-16 bg-surface-container-lowest rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-3xl">thermostat</span>
+</div>
+<div class="flex-1">
+<h3 class="font-headline font-bold text-primary text-lg">Shock &amp; Exposure</h3>
+<p class="text-[11px] font-body text-on-surface-variant leading-tight">Elevate feet 12", cover with thermal foil, monitor pulse.</p>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Secondary Support Area (Taped-on effect) -->
+<section class="bg-surface-container-lowest p-6 rounded shadow-[0_4px_24px_rgba(0,0,0,0.04)] border-l-4 border-secondary relative">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-secondary/10 border border-secondary/20 font-label text-[9px] uppercase tracking-tighter text-secondary rounded">
+                Instructional Clipping
+            </div>
+<div class="flex items-start gap-4">
+<div class="flex-1 space-y-3">
+<h4 class="font-headline font-bold text-on-background">Ground-to-Air Signals</h4>
+<ul class="space-y-2 font-body text-xs text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="font-headline font-bold text-primary">V</span>
+<span>Require Assistance</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="font-headline font-bold text-primary">X</span>
+<span>Require Medical Assistance</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="font-headline font-bold text-primary">Y</span>
+<span>Yes / Affirmative</span>
+</li>
+</ul>
+</div>
+<div class="w-24 h-24 rounded-sm bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover opacity-80 grayscale" data-alt="overhead view of three fires arranged in a triangle on a forest floor as a distress signal at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgGGXXxB2djZDXqGkYRXLt8s8jjbZOxfhVlkBneg7Pk4b2rbu75_tUBIrNtKLtF34fcmJHdyabEbXIJtxrFufR2ZZp6MAlGsgeYnPRywWgt2wGtOh96POmJivi2Pqi8wF0wb15bXhUTriWgCFRpR2wRbuttm33vlwNl3Ybkg6L5ZhtfrY50NF1Tk0W8SSuG_QHRNRvE4ShRPstFGuB4z58KFbuN9faynYBj-JxU-AF0MjXgpPhee1INTTjYbajVZM7cpH_1bCwy8E"/>
+</div>
+</div>
+</section>
+<!-- Map Snippet (Static Offline Cache) -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="font-headline text-xs font-bold uppercase tracking-[0.15em] text-on-surface">Offline Map Cache</h2>
+<span class="font-label text-[10px] text-primary-container bg-primary-fixed px-2 py-0.5 rounded">LAST SYNC: 2H AGO</span>
+</div>
+<div class="h-48 rounded-lg overflow-hidden border border-outline-variant/20 relative">
+<img class="w-full h-full object-cover" data-alt="topographic map with contour lines showing mountainous terrain and a red dot indicating current location in a valley" data-location="Mount Rainier National Park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIQOpHAuZAi0RCW0MbKumzH73CiHbLGWFsprYp2TfjhiLBd8sBjTGe7P0T2FN3CV6CPEc6iu5xtHtdcq4bGGOW5M2GaBvbUb3a-NJGTo7nlvpPUWxCe21HA5Vj-__EHwhR-01gwzz5YfsUWsssahYpx9mp--sSaGI5o4sUh0SAcvI0dAdQ-ACfVfsbTrtw2m6SVx2jcLfrbXf6urr2wH0Y2Un3pmH8EOjpLwD6gjqmvXQWzi0Bkc-FPmnGQvzDSi3mlLHbgqAxKSo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/40 to-transparent pointer-events-none"></div>
+<div class="absolute bottom-4 left-4 font-label text-[10px] text-white uppercase tracking-widest">
+                    Alpha-7 Extraction Zone
+                </div>
+</div>
+</section>
+</main>
+<!-- Footer Space -->
+<div class="h-12"></div>
+<!-- Navigation Drawer (Hidden by default, triggered by menu) -->
+<div class="fixed inset-y-0 left-0 w-80 bg-surface-container-low shadow-2xl z-[60] transform -translate-x-full transition-transform hidden" id="drawer">
+<div class="flex flex-col h-full p-6 space-y-4">
+<div class="flex items-center gap-4 pb-6 border-b border-outline-variant/10">
+<div class="w-12 h-12 rounded bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-primary uppercase text-sm tracking-widest">Lead Explorer</h3>
+<p class="font-body text-xs text-on-surface-variant">Base Camp Alpha</p>
+</div>
+</div>
+<nav class="flex-1 py-4 space-y-2">
+<a class="flex items-center gap-4 p-3 text-on-background hover:translate-x-1 transition-transform font-medium" href="#">
+<span class="material-symbols-outlined">description</span> Field Notes
+                </a>
+<a class="flex items-center gap-4 p-3 bg-primary-container text-on-primary-container font-bold rounded-md" href="#">
+<span class="material-symbols-outlined">emergency</span> SOS Settings
+                </a>
+<a class="flex items-center gap-4 p-3 text-on-background hover:translate-x-1 transition-transform font-medium" href="#">
+<span class="material-symbols-outlined">cloud_off</span> Offline Data
+                </a>
+<a class="flex items-center gap-4 p-3 text-on-background hover:translate-x-1 transition-transform font-medium" href="#">
+<span class="material-symbols-outlined">info</span> About Cartographer
+                </a>
+</nav>
+</div>
+</div>
+</body></html>

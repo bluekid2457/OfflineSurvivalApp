@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#2f4e33",
+                    "on-background": "#1c1c15",
+                    "on-tertiary-fixed": "#0c1d2b",
+                    "on-tertiary-fixed-variant": "#394858",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#544527",
+                    "on-surface": "#1c1c15",
+                    "tertiary-fixed-dim": "#b8c8db",
+                    "on-primary-fixed": "#03210b",
+                    "surface-container-highest": "#e5e2d8",
+                    "primary-fixed": "#c8ecc8",
+                    "secondary-fixed": "#f7dfb7",
+                    "on-tertiary-container": "#a3b4c6",
+                    "on-secondary-fixed": "#251a02",
+                    "surface-container-low": "#f7f4e8",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#98ba99",
+                    "primary-fixed-dim": "#adcfad",
+                    "on-secondary-container": "#726040",
+                    "tertiary-container": "#364656",
+                    "on-surface-variant": "#424841",
+                    "secondary-container": "#f4ddb4",
+                    "primary-container": "#2d4b31",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#c2c8bf",
+                    "secondary": "#6d5c3c",
+                    "surface-tint": "#47664a",
+                    "background": "#fdf9ee",
+                    "primary": "#17341c",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#f1eee3",
+                    "inverse-primary": "#adcfad",
+                    "surface-bright": "#fdf9ee",
+                    "inverse-on-surface": "#f4f1e6",
+                    "outline": "#737971",
+                    "surface-dim": "#dddacf",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e5e2d8",
+                    "tertiary": "#20303f",
+                    "surface-container-high": "#ebe8dd",
+                    "tertiary-fixed": "#d3e4f8",
+                    "surface": "#fdf9ee",
+                    "inverse-surface": "#313129",
+                    "secondary-fixed-dim": "#dac49d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Work Sans"],
+                    "label": ["Space Grotesk"]
+            }
+          }
+        }
+      }
+    </script>
+<style>body {
+    background-color: #fdf9ee;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuC1z8zGnvb0Moym1HVqzh9-AptfmbHJjbrHmD7pSZu7nMWSbGTTQ_Kc1-4HsRVpgRAeFREXZOeQAAXHbFH69rSCRHRaTYCmU-7TIVS-lsVrq0u9lVBmx484Iu_Udqhn0aW3SQmwe6cDwZbkVOikyFXd__Ej2GKaLCvBPMSFW0vuR4bvlMF2t_-zGEnrjrHEccY2U5d7DBPfxYvBTw9JGOU14nkEJV4-lTAJqoStqtIjKrspiGyFoh_uBWpV2LhjXls6XtKKLLTOnqg);
+    font-family: "Work Sans", sans-serif
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.grain-overlay {
+    position: relative
+    }
+.grain-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDUigjSiGvZwoXvm0xpGLWa_5_WonYyjKO_-j4FPUx770mHJRvVDjXJ626mvCZ_Ig7TOKdLw6qpJPVK-zyFP272wMa6qmVbiFW39Ousy1XW5FP-HFy04MKa6nJ6pOa4wpHozQWAMJ08ekQEhHCJ8ZiFKZCYq2-wcFsbPA6EfRJ-hFbufdYOAltW2-8pISUlDQSJJeZ7R_nfxgA01WI2VONhQBhbH28Fx9xW9_dpO9-gTDIGXMV1GeUL6w4_FsKAL8WSxf-E5GaqXIM);
+    opacity: 0.03;
+    pointer-events: none
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-background min-h-screen pb-24">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fdf9ee]/85 backdrop-blur-xl shadow-[0_32px_32px_0_rgba(28,28,21,0.06)] flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#17341c]" data-icon="menu">menu</span>
+<span class="font-['Space_Grotesk'] text-lg font-bold tracking-[0.1em] text-[#17341c]">FIELD JOURNAL</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#17341c]" data-icon="explore">explore</span>
+</div>
+</nav>
+<!-- Search Header Canvas -->
+<main class="pt-24 px-6 max-w-5xl mx-auto grain-overlay">
+<header class="mb-10">
+<div class="flex items-center gap-2 mb-2">
+<span class="font-label uppercase tracking-widest text-[10px] text-outline font-semibold">Search Results</span>
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+</div>
+<h1 class="font-headline text-4xl font-bold text-primary tracking-tight leading-none mb-4">
+                'how to change a flat tire'
+            </h1>
+<p class="font-body text-on-surface-variant max-w-lg">
+                Found 2 specialized guides in the Cartographer archives for off-grid vehicle maintenance.
+            </p>
+</header>
+<!-- Bento Grid Results -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Result 1: RV Tire Change Guide (Featured/Larger) -->
+<div class="md:col-span-8 bg-surface-container-low rounded shadow-sm overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-md border-l-4 border-primary">
+<div class="relative h-64 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of a rugged RV wheel on a dusty gravel road with mechanical tools lying nearby in soft morning light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiozqj2w-NnQ9q2QdtA3Iumq73L48eHXaZeN65p3lQe2B_wRKe0llxv0LzD6p0gOuMvgskqClgnLxiXyFlPQuUZc2jbs1uzovMvPscobYRUw2mJ49fWwAvU-Tv1c8PbAEfusZJ36Za2CfHL0DFif61udCGRxMLox7TxenNzVKninMgwmGCAG8wbZ2LVcNzDI9VFFlmqdLtXcRyH03cF5Dlxpld2Gw1kxzsLdTpNsKPvix9IOFvIO3ueShiiDVJXyYzej4MRb9QbT0"/>
+<div class="absolute top-4 left-4 bg-primary/90 text-on-primary px-3 py-1 font-label text-[10px] tracking-widest uppercase rounded-sm">
+                        Technical Manual
+                    </div>
+</div>
+<div class="p-8 bg-surface-container-low">
+<div class="flex justify-between items-start mb-4">
+<h2 class="font-headline text-2xl font-bold text-primary leading-tight">RV Tire Change Guide</h2>
+<span class="material-symbols-outlined text-primary-container" data-icon="backpack" data-weight="fill" style="font-variation-settings: 'FILL' 1;">backpack</span>
+</div>
+<p class="font-body text-on-surface-variant mb-6 leading-relaxed">
+                        Comprehensive procedures for high-clearance recreation vehicles. Covers stabilizer usage, weight distribution during lifting, and torque specs for heavy-duty lugs.
+                    </p>
+<div class="flex items-center gap-6">
+<button class="bg-gradient-to-br from-[#17341c] to-[#2d4b31] text-on-primary px-6 py-3 rounded-md font-label uppercase text-xs font-bold tracking-widest flex items-center gap-2 active:scale-95 transition-all">
+                            Open Notes
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<div class="flex flex-col">
+<span class="font-label text-[10px] uppercase text-outline">Difficulty</span>
+<span class="font-body text-sm font-semibold">Moderate-High</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Metadata / Tip Area -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<div class="bg-surface-container p-6 rounded relative overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary mb-2" data-icon="emergency">emergency</span>
+<h3 class="font-headline font-bold text-secondary text-lg mb-2">Field Safety</h3>
+<p class="font-body text-sm text-on-secondary-container leading-relaxed">
+                            Always ensure the vehicle is on a level, hard surface. Use wheel chocks on the opposite diagonal.
+                        </p>
+</div>
+<!-- Technical grid visual element -->
+<div class="absolute -right-4 -bottom-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[120px]" data-icon="grid_4x4">grid_4x4</span>
+</div>
+</div>
+<div class="bg-surface-container-highest p-6 rounded flex-grow">
+<h3 class="font-label text-[10px] uppercase font-bold tracking-widest text-outline mb-4">Related Gear</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-surface-variant rounded-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="handyman">handyman</span>
+</div>
+<div>
+<div class="font-body text-sm font-bold">12-Ton Hydraulic Jack</div>
+<div class="font-label text-[10px] text-outline uppercase">Essential</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-surface-variant rounded-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="construction">construction</span>
+</div>
+<div>
+<div class="font-body text-sm font-bold">Telescoping Lug Wrench</div>
+<div class="font-label text-[10px] text-outline uppercase">Standard</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Result 2: Lifting a Heavy Vehicle -->
+<div class="md:col-span-12 lg:col-span-12 bg-surface-container-low p-1 rounded-sm shadow-sm">
+<div class="bg-surface-container-lowest p-8 flex flex-col md:flex-row gap-8 items-center border border-outline-variant/10">
+<div class="w-full md:w-1/3 aspect-video rounded-sm overflow-hidden">
+<img class="w-full h-full object-cover grayscale contrast-125 mix-blend-multiply opacity-80" data-alt="Instructional graphic showing a heavy truck being lifted by a bottle jack under the axle with safety stands in place." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrngu1ehzGXAPagjX-Sfk8B8z7GBQsZ5pYBw5lm-1dEpgPUA6V0NMRxGwkUawDm1iCJmxetuuOXLkcbF0aebygMJjBA6W-vtjyYrGuTuepsXH9NXE49nSotsCPbxh8ZfiS80SRYRrk4NVqHbuP89TLQUp7_OaNG3VG74WjxTZPpoO8i3xzTa_vQEUK_7mljBoXYrA81nz3DBqLB3pvqJcXApbcbVUBBRdAxrL6jPB9II3aHmLSr_cYuYEKvc0ok4XvXwZ1q8yDskY"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="description">description</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Skill Module 042</span>
+</div>
+<h2 class="font-headline text-2xl font-bold text-primary mb-3">Lifting a Heavy Vehicle</h2>
+<p class="font-body text-on-surface-variant mb-6 text-base max-w-2xl">
+                            Safety protocols for using bottle jacks and floor jacks on terrain-shifted surfaces. Learn how to identify structural jack points when the manual is missing.
+                        </p>
+<div class="flex gap-4">
+<button class="bg-surface-container-highest text-primary hover:bg-primary hover:text-on-primary transition-colors px-5 py-2 rounded-md font-label uppercase text-[10px] font-bold tracking-widest border border-primary/10">
+                                View Diagram
+                            </button>
+<button class="text-primary font-label uppercase text-[10px] font-bold tracking-widest flex items-center gap-1 hover:translate-x-1 transition-transform">
+                                Full Article <span class="material-symbols-outlined text-xs" data-icon="north_east">north_east</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Asymmetric Detail Section -->
+<section class="mt-16 mb-20">
+<div class="flex flex-col md:flex-row gap-12 items-start">
+<div class="md:w-1/2 order-2 md:order-1">
+<h4 class="font-headline text-xl font-bold text-primary mb-4 italic">"The key isn't strength; it's leverage and the right surface prep."</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                        If you're stuck in mud or soft sand, standard jacks will sink. You must create a 'foundation' using rocks or logs before attempting the lift. This guide includes a section on improvised base-plates for soft earth.
+                    </p>
+<div class="mt-6 p-4 border-l-2 border-primary/20">
+<span class="font-label text-[10px] uppercase text-outline block mb-1">Contributor</span>
+<span class="font-body font-bold">Chief Mechanic, Base Camp Alpha</span>
+</div>
+</div>
+<div class="md:w-1/2 order-1 md:order-2 bg-primary p-1 rounded-sm rotate-1 shadow-lg">
+<div class="bg-white p-4 aspect-[4/3] flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-primary text-6xl mb-4" data-icon="warning">warning</span>
+<div class="font-headline font-bold text-primary text-lg">OFF-GRID ALERT</div>
+<div class="font-body text-sm text-on-surface-variant mt-2 px-8">Always carry a solid wood block (2x6 or thicker) for jack stability in nature.</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Navigation Shells -->
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-[#fdf9ee]/85 backdrop-blur-xl flex justify-around items-center px-4 py-3 pb-safe border-t border-[#c2c8bf]/15">
+<a class="flex flex-col items-center justify-center text-[#737971] p-2 hover:text-[#17341c] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="backpack">backpack</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-wider font-medium">Gear</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#737971] p-2 hover:text-[#17341c] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-wider font-medium">Maps</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#17341c] to-[#2d4b31] text-[#fdf9ee] rounded-lg px-4 py-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="handyman">handyman</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-wider font-medium">Skills</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#737971] p-2 hover:text-[#17341c] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="podcasts">podcasts</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-wider font-medium">Signal</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Field Journal - Survival Guide</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    vertical-align: middle
+    }
+.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBDVRU8ZzPuJ5CAJOE3sib3jo6laVmbTEeD0YMQ6EvWhWqybcEghU6ebsyrWkc71BoY6Gyio1rPDYvZhUl-KzHCW8GrH8lxqXYF7_kKGdt1lIs54x6aC_pga9dlibjDsJDQU8YXstUOX9pol9_LKSUAAQKzcaWZXngxIB7uEMBqHuKyJECCGY06TorFO3xNKkROWIfpYkBdidhQfqSVCnibESJo3HtxwdSGZybt3Ui1AooU9gAhV5ZZTPaXCVShCfQ3Bv_bbAUmgqY);
+    opacity: 0.03;
+    pointer-events: none
+    }
+.text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+    }</style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#2f4e33",
+                      "on-background": "#1c1c15",
+                      "on-tertiary-fixed": "#0c1d2b",
+                      "on-tertiary-fixed-variant": "#394858",
+                      "on-error": "#ffffff",
+                      "on-secondary-fixed-variant": "#544527",
+                      "on-surface": "#1c1c15",
+                      "tertiary-fixed-dim": "#b8c8db",
+                      "on-primary-fixed": "#03210b",
+                      "surface-container-highest": "#e5e2d8",
+                      "primary-fixed": "#c8ecc8",
+                      "secondary-fixed": "#f7dfb7",
+                      "on-tertiary-container": "#a3b4c6",
+                      "on-secondary-fixed": "#251a02",
+                      "surface-container-low": "#f7f4e8",
+                      "on-primary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-primary-container": "#98ba99",
+                      "primary-fixed-dim": "#adcfad",
+                      "on-secondary-container": "#726040",
+                      "tertiary-container": "#364656",
+                      "on-surface-variant": "#424841",
+                      "secondary-container": "#f4ddb4",
+                      "primary-container": "#2d4b31",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#c2c8bf",
+                      "secondary": "#6d5c3c",
+                      "surface-tint": "#47664a",
+                      "background": "#fdf9ee",
+                      "primary": "#17341c",
+                      "on-secondary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container": "#f1eee3",
+                      "inverse-primary": "#adcfad",
+                      "surface-bright": "#fdf9ee",
+                      "inverse-on-surface": "#f4f1e6",
+                      "outline": "#737971",
+                      "surface-dim": "#dddacf",
+                      "on-tertiary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "surface-variant": "#e5e2d8",
+                      "tertiary": "#20303f",
+                      "surface-container-high": "#ebe8dd",
+                      "tertiary-fixed": "#d3e4f8",
+                      "surface": "#fdf9ee",
+                      "inverse-surface": "#313129",
+                      "secondary-fixed-dim": "#dac49d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Space Grotesk"],
+                      "body": ["Work Sans"],
+                      "label": ["Space Grotesk"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-background selection:bg-primary-fixed-dim selection:text-primary min-h-screen pb-24">
+<div class="fixed inset-0 grain-overlay z-[100]"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fdf9ee]/85 backdrop-blur-xl shadow-[0_32px_32px_0_rgba(28,28,21,0.06)]">
+<div class="flex justify-between items-center px-6 h-16 w-full">
+<button class="text-[#17341c] hover:bg-[#f1eee3] transition-colors active:scale-95 duration-200 p-2 rounded-lg">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="font-['Space_Grotesk'] text-lg font-bold tracking-[0.1em] text-[#17341c]">FIELD JOURNAL</div>
+<button class="text-[#17341c] hover:bg-[#f1eee3] transition-colors active:scale-95 duration-200 p-2 rounded-lg">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-5xl mx-auto space-y-8">
+<!-- Status & Sync Section -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="space-y-1">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/5 rounded-full border border-primary/10">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-label text-[10px] tracking-widest uppercase font-bold text-primary">OFFLINE DATABASE: 100% SYNCED</span>
+</div>
+<h1 class="font-headline text-4xl md:text-5xl font-bold tracking-tight text-on-background mt-4">Welcome, Explorer.</h1>
+<p class="text-on-surface-variant max-w-md italic">Base Camp Alpha. Conditions: Overcast, 42°F. Ready for deployment.</p>
+</div>
+<div class="relative w-full md:w-80 group">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border-b border-outline/30 focus:border-primary focus:ring-0 px-12 py-3 font-body text-sm placeholder:text-outline transition-all rounded-t-lg" placeholder="Search field notes..." type="text"/>
+</div>
+</section>
+<!-- Bento Grid Categories -->
+<section class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[600px]">
+<!-- Category: Fire & Water -->
+<div class="md:col-span-2 md:row-span-1 group relative overflow-hidden bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10 flex flex-col justify-end p-6">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90" data-alt="Close up of a campfire with glowing orange embers and soft wispy smoke in a dark forest setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeV4xaZR1OokzErOaTWD4KrRiwduHpXh2c-Je0h4Lpktnhkg8YgR-7ReDiMjIVCGs8q8IoaNoOW_EWdicXMWlikMnlOgiP_bgx8dGpIobIGN1fSV4SUeNPjT_nTn-JJ7dw9pIl5a8zbbYdyeh7CywFXb0cv8vPcLhkMN71uN1NQe55Bbmo37GV0rlV_8xkrakQ_aV1EsVgcW8MvIDrdLuwG0NJGS8PANNR7ejWyzHP6pKN1l2-cUNTtF3cs7u89_XKMQewwtMNwc8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="relative z-10">
+<span class="font-label text-[10px] text-primary-fixed-dim uppercase tracking-widest mb-1 block">Vitality</span>
+<h3 class="font-headline text-2xl font-bold text-white">Fire &amp; Water</h3>
+<p class="text-white/70 text-sm mt-2 font-body max-w-xs">Hydration logistics and thermal regulation techniques.</p>
+</div>
+</div>
+<!-- Category: First Aid -->
+<div class="md:col-span-2 md:row-span-1 group relative overflow-hidden bg-surface-container rounded-xl flex flex-col p-6 border border-outline-variant/10">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-error-container/30 rounded-lg">
+<span class="material-symbols-outlined text-error" data-icon="medical_services">medical_services</span>
+</div>
+<span class="material-symbols-outlined text-outline/40 group-hover:text-primary transition-colors" data-icon="arrow_outward">arrow_outward</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-surface">First Aid</h3>
+<p class="text-on-surface-variant text-sm mt-2 font-body">Trauma response and wilderness medicine protocols.</p>
+<div class="mt-auto pt-6 flex gap-2">
+<span class="px-2 py-1 bg-surface-container-highest rounded text-[10px] font-label font-bold text-on-surface-variant uppercase">Emergency</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded text-[10px] font-label font-bold text-on-surface-variant uppercase">Bandaging</span>
+</div>
+</div>
+<!-- Category: Mechanic & Gear -->
+<div class="md:col-span-1 md:row-span-1 group relative overflow-hidden bg-[#2d4b31] rounded-xl p-6 flex flex-col text-white">
+<div class="mb-4">
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="build">build</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-2">Mechanic &amp; Gear</h3>
+<p class="text-white/60 text-xs font-body mb-6">Tools for the rugged trail and vehicle maintenance.</p>
+<div class="mt-auto">
+<div class="h-1 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary-fixed-dim w-3/4"></div>
+</div>
+<span class="text-[9px] font-label uppercase tracking-widest mt-2 block opacity-60">Gear Health: 75%</span>
+</div>
+</div>
+<!-- Category: Shelter -->
+<div class="md:col-span-3 md:row-span-1 group relative overflow-hidden bg-surface-container-low rounded-xl flex flex-col md:flex-row border border-outline-variant/10">
+<div class="w-full md:w-1/2 h-48 md:h-full relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover grayscale-[0.2] contrast-125" data-alt="A small canvas tent pitched under towering pine trees in a misty mountain landscape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5cUjTZ4bRFX2TykL9KU08-qmeDmJ0c-zO61jCJdjSCxlPo_OjWdGO2dtiV6JZPyo7L1POLaAP7pA2nXYivrYWRk1F2aLesyoTpMF1jZlq3mHh13W_WSQ0CPXE1UTVpSEXIpLsbDSfWmGhtyc43HanJzo6N28DgW_aRHDw6DXVcwPblUde3TlI0bpJu1gqfjF6OcKjR1U6WEgsB2eb5gj8x_bMZvOzVqsl0VxxoLwNlMocCOqveC8JB8TpG8E3MheYFJegdQcLyW8"/>
+</div>
+<div class="p-8 flex flex-col justify-center flex-1">
+<span class="font-label text-[10px] text-primary uppercase tracking-widest mb-2 block font-bold">Encampment</span>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-3">Shelter</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-6">Structural integrity and thermal shielding in extreme environments. From lean-tos to winterized bases.</p>
+<button class="self-start px-6 py-2 bg-primary text-white text-xs font-label font-bold uppercase tracking-widest rounded transition-all hover:bg-primary-container active:scale-95">Explore Blueprints</button>
+</div>
+</div>
+</section>
+<!-- Secondary Content: Recent Notes & Location -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 pb-12">
+<!-- Recent Field Notes -->
+<div class="lg:col-span-2 space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="font-headline text-xl font-bold tracking-tight uppercase">Recent Field Notes</h2>
+<span class="text-xs font-label text-outline uppercase tracking-wider">View Journal</span>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container-low p-4 rounded-lg flex gap-4 hover:translate-x-1 transition-transform cursor-pointer">
+<div class="w-16 h-16 rounded bg-surface-container-highest flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="description">description</span>
+</div>
+<div class="space-y-1">
+<h4 class="font-headline font-bold text-sm">Signal Flare Protocols</h4>
+<p class="text-xs text-on-surface-variant line-clamp-2">Standard operating procedures for day and night aerial signaling using local flora and magnesium alloys.</p>
+<span class="text-[9px] font-label text-outline uppercase">Logged: 14h ago</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg flex gap-4 hover:translate-x-1 transition-transform cursor-pointer">
+<div class="w-16 h-16 rounded bg-surface-container-highest flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="eco">eco</span>
+</div>
+<div class="space-y-1">
+<h4 class="font-headline font-bold text-sm">Edible Pine Identification</h4>
+<p class="text-xs text-on-surface-variant line-clamp-2">Distinguishing between high-vitamin C bark and toxic mimics in the Pacific Northwest region.</p>
+<span class="text-[9px] font-label text-outline uppercase">Logged: 2d ago</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Location Meta -->
+<div class="bg-surface-container rounded-xl p-6 space-y-4 border border-outline-variant/5">
+<h2 class="font-headline text-lg font-bold uppercase tracking-wide">Current Sector</h2>
+<div class="w-full aspect-square rounded-lg overflow-hidden bg-surface-variant relative grayscale shadow-inner">
+<img class="w-full h-full object-cover opacity-50 mix-blend-multiply" data-alt="Top-down abstract satellite map view of mountain ridges and valleys with topographic lines" data-location="Alaska Range" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiKNVxEgeE73DwHUhwI2_mRuhj6Eg-K_IViEM3GZ7xMZvAYGtBC6fjb-P4hC0i4qPMvuOsDekBefUmcPvBZQFw26KHUkqyz-FShdsq_lpGuVvaBZ3aUqdMCjCHF4MoTy7Za39UO6QXbUXGqfVMCVCq2GGjC1uw9IjWWmjhDj_l_-xhjAYrdErPfwWszwQkD1xxjKcDRQfxxkUZ5sA-3J-cexnD-CM4F-DfUUepYIMOX_T0cc4jYGQmJfyF1q9H0peBIT-2lwENke0"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-error text-4xl animate-pulse" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-surface-container-highest p-3 rounded">
+<span class="text-[8px] font-label text-outline uppercase block">Elevation</span>
+<span class="font-headline font-bold text-sm">4,820 FT</span>
+</div>
+<div class="bg-surface-container-highest p-3 rounded">
+<span class="text-[8px] font-label text-outline uppercase block">Humidity</span>
+<span class="font-headline font-bold text-sm">18%</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- NavigationDrawer (Off-screen simulated) -->
+<!-- Hidden by default, but defined styles exist for reference -->
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-[#fdf9ee]/85 backdrop-blur-xl border-t border-[#c2c8bf]/15">
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#17341c] to-[#2d4b31] text-[#fdf9ee] rounded-lg px-4 py-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="backpack" style="font-variation-settings: 'FILL' 1;">backpack</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-wider font-medium">Gear</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#737971] p-2 hover:text-[#17341c] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-wider font-medium">Maps</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#737971] p-2 hover:text-[#17341c] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="handyman">handyman</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-wider font-medium">Skills</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#737971] p-2 hover:text-[#17341c] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="podcasts">podcasts</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-wider font-medium">Signal</span>
+</a>
+</nav>
+<!-- FAB -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-primary text-white rounded-full shadow-[0_32px_32px_0_rgba(28,28,21,0.15)] flex items-center justify-center active:scale-90 transition-transform z-40 border-2 border-primary-container">
+<span class="material-symbols-outlined text-2xl" data-icon="add_notes" style="font-variation-settings: 'FILL' 1;">add_notes</span>
+</button>
+</body></html>

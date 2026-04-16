@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Field Journal - RV Tire Change Guide</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-primary-fixed-variant": "#2f4e33",
+                "on-background": "#1c1c15",
+                "on-tertiary-fixed": "#0c1d2b",
+                "on-tertiary-fixed-variant": "#394858",
+                "on-error": "#ffffff",
+                "on-secondary-fixed-variant": "#544527",
+                "on-surface": "#1c1c15",
+                "tertiary-fixed-dim": "#b8c8db",
+                "on-primary-fixed": "#03210b",
+                "surface-container-highest": "#e5e2d8",
+                "primary-fixed": "#c8ecc8",
+                "secondary-fixed": "#f7dfb7",
+                "on-tertiary-container": "#a3b4c6",
+                "on-secondary-fixed": "#251a02",
+                "surface-container-low": "#f7f4e8",
+                "on-primary": "#ffffff",
+                "error-container": "#ffdad6",
+                "on-primary-container": "#98ba99",
+                "primary-fixed-dim": "#adcfad",
+                "on-secondary-container": "#726040",
+                "tertiary-container": "#364656",
+                "on-surface-variant": "#424841",
+                "secondary-container": "#f4ddb4",
+                "primary-container": "#2d4b31",
+                "error": "#ba1a1a",
+                "outline-variant": "#c2c8bf",
+                "secondary": "#6d5c3c",
+                "surface-tint": "#47664a",
+                "background": "#fdf9ee",
+                "primary": "#17341c",
+                "on-secondary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "surface-container": "#f1eee3",
+                "inverse-primary": "#adcfad",
+                "surface-bright": "#fdf9ee",
+                "inverse-on-surface": "#f4f1e6",
+                "outline": "#737971",
+                "surface-dim": "#dddacf",
+                "on-tertiary": "#ffffff",
+                "on-error-container": "#93000a",
+                "surface-variant": "#e5e2d8",
+                "tertiary": "#20303f",
+                "surface-container-high": "#ebe8dd",
+                "tertiary-fixed": "#d3e4f8",
+                "surface": "#fdf9ee",
+                "inverse-surface": "#313129",
+                "secondary-fixed-dim": "#dac49d"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Space Grotesk"],
+                "body": ["Work Sans"],
+                "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCQTK5a2KlaBAdZdBWDE4AGAcsXMB6hfqLHH47ZNT7huaH3_B2G4Kc-M-i8bGBY38-6APfMOO-5XBr5K-XAZnEUlPgUQtqhKa0mb3vLiEA2TbJ1T_oVPPujqZ82egcQ3OOvK0Spm1e1lxlExW4CK7YqT1M3KpV4VlJyG93Z2fcqguwgZlF9MqxNfyXq48bMhDmoUPwlVNTeqZk8Rh8udVqmZtmTGTaDwSS6xd60B68BdYYWV4Q7VTo5RgHraIUKZxGW7M_RldxMOOo);
+    opacity: 0.03;
+    pointer-events: none
+    }
+.paper-layer {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen pb-24">
+<!-- Grain Texture Overlay -->
+<div class="fixed inset-0 grain-overlay z-[60]"></div>
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fdf9ee]/85 backdrop-blur-xl shadow-[0_32px_32px_0_rgba(28,28,21,0.06)] flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#17341c]" data-icon="menu">menu</span>
+<span class="font-['Space_Grotesk'] text-lg font-bold tracking-[0.1em] text-[#17341c]">FIELD JOURNAL</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#17341c]" data-icon="explore">explore</span>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 px-6 max-w-4xl mx-auto space-y-12">
+<!-- Hero Section: Editorial Style -->
+<header class="relative space-y-4">
+<div class="flex items-center gap-2 font-label uppercase tracking-[0.2em] text-xs text-secondary">
+<span class="w-8 h-px bg-secondary/30"></span>
+                Protocol 04 // Emergency
+            </div>
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tight text-primary leading-none">
+                RV Tire <br/>Recovery.
+            </h1>
+<p class="text-on-surface-variant max-w-md italic border-l-2 border-outline-variant pl-4">
+                Field guide for heavy vehicle wheel replacement in off-grid environments. Maintain stability, ensure safety, and return to the trail.
+            </p>
+</header>
+<!-- Safety Warning: Nature-Appropriate Accent -->
+<section class="bg-error-container/30 rounded-lg p-6 flex gap-4 items-start border border-error/10">
+<span class="material-symbols-outlined text-error text-3xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">warning</span>
+<div class="space-y-1">
+<h3 class="font-headline font-bold text-on-error-container uppercase tracking-wider text-sm">Critical Safety Warning</h3>
+<p class="text-on-error-container text-sm leading-relaxed">
+                    Never place any part of your body under the RV while it is supported only by a jack. Always use jack stands for secondary support. Ensure all passengers have evacuated the vehicle and are standing at a safe distance.
+                </p>
+</div>
+</section>
+<!-- Bento Grid Instructions -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Step 1: Stabilization -->
+<div class="md:col-span-8 bg-surface-container-low rounded-xl p-8 paper-layer relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 font-headline text-6xl font-bold text-outline-variant/20 group-hover:text-primary/10 transition-colors">01</div>
+<div class="space-y-4 relative z-10">
+<h2 class="font-headline text-2xl font-bold text-primary">Stabilization</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                        Park on the flattest, firmest ground available. Engage the parking brake and use heavy-duty chocks on the tires opposite the side being changed. If on soft soil, place a wide wooden plank under the jack base to distribute weight.
+                    </p>
+<div class="pt-4">
+<img class="w-full h-48 object-cover rounded-sm grayscale-[0.3] contrast-[1.1]" data-alt="rugged wheel chocks positioned against a large RV tire on a gravel road with mountains in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPqV1RCuuxKTdzcz80FrPuCMZYO1GQZxOD5sFP6eUbB7P-VHUTKPuIL5HMt7ZaiYr5lNMgli8PiOuiP-71WG6We4rEhbGJpJJd9lqyTEgV6NM7efa7ZxLS_jkANCYO-AW_dvHVAo9lwQi0Gf072tAWWqCBQ1X6CKmjZHSPO4JBH16IJjwwtv6Kk97pGcsfQT-gEU9lE7PJzeat13y2swmYmhnGx3q3_FN5b4ynIRV3BBnUIrqKLAzqRWbHPHrVhCHpRBISGHhScSM"/>
+</div>
+</div>
+</div>
+<!-- Step 2: Loosen Lug Nuts -->
+<div class="md:col-span-4 bg-surface-container rounded-xl p-8 paper-layer flex flex-col justify-between">
+<div class="space-y-4">
+<div class="font-headline text-4xl font-bold text-outline-variant/40">02</div>
+<h2 class="font-headline text-xl font-bold text-primary">Initial Break</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                        Using your lug wrench, loosen the nuts in a star pattern. Do NOT remove them yet. Only break the initial tension while the tire is still touching the ground to prevent spinning.
+                    </p>
+</div>
+<div class="mt-6 flex items-center justify-center h-24 bg-surface-container-low rounded border border-outline-variant/10">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="build">build</span>
+</div>
+</div>
+<!-- Step 3: Jack Up the RV -->
+<div class="md:col-span-12 bg-primary text-on-primary rounded-xl p-8 paper-layer relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8">
+<span class="material-symbols-outlined text-8xl text-on-primary/10" data-icon="expand_less">expand_less</span>
+</div>
+<div class="md:w-2/3 space-y-6">
+<div class="font-headline text-xs tracking-[0.3em] uppercase opacity-60">Phase Two</div>
+<h2 class="font-headline text-3xl font-bold">03. Elevation</h2>
+<p class="opacity-90 leading-relaxed font-light">
+                        Position the jack directly under the frame or a designated lift point. Pump slowly and steadily until the flat tire is roughly 3 inches off the ground. Ensure the RV remains vertical and the jack does not lean.
+                    </p>
+<div class="flex gap-4">
+<div class="h-1 bg-on-primary/20 flex-1 rounded-full overflow-hidden">
+<div class="h-full bg-on-primary w-3/4"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 4: Removal & Replacement -->
+<div class="md:col-span-6 bg-surface-container-lowest rounded-xl p-8 paper-layer border border-outline-variant/20">
+<div class="space-y-4">
+<div class="font-headline text-4xl font-bold text-outline-variant/40">04</div>
+<h2 class="font-headline text-xl font-bold text-primary">Replacement</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                        Finish removing the lug nuts and pull the flat tire toward you. Slide the spare onto the hub, aligning the bolts. Hand-tighten the nuts in the same star pattern used earlier.
+                    </p>
+</div>
+</div>
+<!-- Step 5: Lowering & Final Torque -->
+<div class="md:col-span-6 bg-surface-container-low rounded-xl p-8 paper-layer">
+<div class="space-y-4">
+<div class="font-headline text-4xl font-bold text-outline-variant/40">05</div>
+<h2 class="font-headline text-xl font-bold text-primary">Grounding</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                        Lower the jack slowly until the tire makes contact. Remove the jack. Use the lug wrench to tighten the nuts as much as possible. Check torque again after driving 50 miles.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Equipment Checklist -->
+<section class="space-y-6 pt-8">
+<h3 class="font-headline text-xl font-bold uppercase tracking-widest text-primary flex items-center gap-3">
+<span class="w-6 h-6 bg-primary text-on-primary text-[10px] flex items-center justify-center rounded-sm">X</span>
+                The Kit Bag
+            </h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-surface-container p-4 rounded-sm border-l-4 border-primary">
+<p class="font-label text-[10px] uppercase opacity-60">Essential</p>
+<p class="font-bold text-sm">20-Ton Jack</p>
+</div>
+<div class="bg-surface-container p-4 rounded-sm border-l-4 border-primary">
+<p class="font-label text-[10px] uppercase opacity-60">Essential</p>
+<p class="font-bold text-sm">Lug Wrench</p>
+</div>
+<div class="bg-surface-container p-4 rounded-sm border-l-4 border-secondary">
+<p class="font-label text-[10px] uppercase opacity-60">Critical</p>
+<p class="font-bold text-sm">Jack Stand</p>
+</div>
+<div class="bg-surface-container p-4 rounded-sm border-l-4 border-outline">
+<p class="font-label text-[10px] uppercase opacity-60">Utility</p>
+<p class="font-bold text-sm">Wood Blocks</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-[#fdf9ee]/85 backdrop-blur-xl flex justify-around items-center px-4 py-3 pb-safe border-t border-[#c2c8bf]/15">
+<button class="flex flex-col items-center justify-center text-[#737971] p-2 hover:text-[#17341c] transition-colors">
+<span class="material-symbols-outlined" data-icon="backpack">backpack</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-wider font-medium">Gear</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#737971] p-2 hover:text-[#17341c] transition-colors">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-wider font-medium">Maps</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-gradient-to-br from-[#17341c] to-[#2d4b31] text-[#fdf9ee] rounded-lg px-4 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="handyman">handyman</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-wider font-medium">Skills</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#737971] p-2 hover:text-[#17341c] transition-colors">
+<span class="material-symbols-outlined" data-icon="podcasts">podcasts</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-wider font-medium">Signal</span>
+</button>
+</nav>
+</body></html>
