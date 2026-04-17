@@ -9,6 +9,13 @@
     "ios": "expo run:ios",
     "web": "expo start --web",
     "api": "node backend/server.js",
+    "ingest:exa": "node scripts/exa_ingest.mjs",
+    "transform:exa": "node scripts/extract_tip_snippets.mjs",
+    "embed:corpus": ".venv/bin/python3 scripts/precompute_embeddings.py --input assets/objectbox/exa-corpus.json --output assets/objectbox/objectbox-index.embedded.json",
+    "embed:tips": ".venv/bin/python3 scripts/precompute_embeddings.py --input assets/objectbox/exa-tip-snippets.json --output assets/objectbox/objectbox-index.embedded.json",
+    "db:push:exa": "node scripts/push_exa_to_supabase.mjs",
+    "db:push:tips": "node scripts/push_tip_snippets_to_supabase.mjs",
+    "pipeline:tips": "npm run transform:exa && npm run embed:tips && npm run db:push:tips",
     "lint": "expo lint",
     "objectbox:generate": "objectbox-generator"
   },
@@ -24,8 +31,12 @@
   },
   "homepage": "https://github.com/bluekid2457/LocalVectorDB#readme",
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^3.0.2",
     "@shopify/flash-list": "2.0.2",
+    "@supabase/supabase-js": "^2.103.3",
     "babel-preset-expo": "~54.0.10",
+    "dotenv": "^17.4.2",
+    "exa-js": "^2.11.0",
     "expo": "~54.0.33",
     "expo-asset": "~12.0.12",
     "expo-build-properties": "~1.0.10",
@@ -35,8 +46,10 @@
     "expo-file-system": "~19.0.21",
     "express": "^5.1.0",
     "onnxruntime-react-native": "^1.24.3",
+    "pg": "^8.20.0",
     "react": "19.1.0",
     "react-native": "0.81.5",
+    "react-native-url-polyfill": "^3.0.0",
     "zustand": "^5.0.12"
   },
   "devDependencies": {
