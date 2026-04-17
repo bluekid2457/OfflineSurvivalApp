@@ -42,3 +42,10 @@ ios/build/
 
 # Bundles
 *.jsbundle
+
+backend/config/__pycache__/*
+
+backend/__pycache__/*
+backend/loader/__pycache__/*
+backend/schemas/__pycache__/*
+backend/tests/__pycache__/*
