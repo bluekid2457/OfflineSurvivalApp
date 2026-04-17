@@ -3,6 +3,7 @@ import { SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 import { SyncScreen } from './src/screens/SyncScreen';
 import { SearchScreen } from './src/screens/SearchScreen';
 import { useAppStore } from './src/store/useAppStore';
+import { colors } from './src/theme/colors';
 
 export default function App() {
   const isReady = useAppStore((state) => state.isReady);
@@ -14,7 +15,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <StatusBar barStyle="light-content" />
+      <StatusBar barStyle="light-content" backgroundColor={colors.background} />
       {isReady ? <SearchScreen /> : <SyncScreen />}
     </SafeAreaView>
   );
@@ -23,6 +24,6 @@ export default function App() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#0f172a',
+    backgroundColor: colors.background,
   },
 });
